@@ -1,0 +1,254 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creators Lab Technology</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@x.x.x/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body{
+            background: linear-gradient(to right, #3d1754, #1c284c);
+            /* Ensure text is readable on the gradient background */
+           
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            margin: -10px; /* Remove margin to eliminate the gap between cards */
+            transition: transform 0.3s ease-in-out;
+            background:transparent; /* Set the background of the entire card to transparent */
+            border: none; /* Remove the border of the card */
+        }
+        .card:hover {
+            transform: scale(1.05);
+            background: #f9f8fa0a; /* Add a hover color effect */
+
+        }
+
+        .card-img-overlay {
+            color: #fff;
+        }
+
+        .card-body {
+            background: transparent !important; /* Set the background of the card body to transparent */
+        }
+        .thumbnail {
+            margin-right: 10px; /* Add margin to the right of the thumbnail for spacing */
+            float: left; /* Float the thumbnail to the left */
+        }
+
+        .skyblue-btn {
+            background-color: #87CEEB; /* Sky Blue color */
+            color: #fff; /* White text */
+            border-radius: 2px;
+            margin-right: 10px; /* Add margin to the right of the sky-blue buttons */
+        }
+        .skyblue-btn:hover {
+            transform: scale(1.05);
+        }
+        .transparent-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .sky{
+            background-color: #87CEEB; /* Sky Blue color */
+            color: #fff; /* White text */
+            height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 8px;
+            margin-right: 10px; /* Add margin to the right of the sky-blue buttons */
+        }
+        .sky:hover {
+            transform: scale(1.05);
+        }
+        
+        .navbar-nav .nav-link {
+         color: #fff !important; /* Use !important to ensure that this style takes precedence */
+        }
+        .nav-link:hover {
+            transform: scale(1.05);
+        }
+        .nav-item{
+            color: white;
+        }
+        .nav-item :hover {
+            transform: scale(1.05);
+        }
+        .btn{
+            border-radius: 2px;
+            color: #fff;
+        }
+        .container{
+            color: white;
+        }
+        h5.card-title {
+            color:#864187; /* Set the text color for h5 (card title) to pink */
+        }
+
+        p.card-text {
+            color: #fff; /* Set the text color for p (card text) to white */
+        }
+        .dropdown-item{
+            color: white;
+        }
+        .navbar-brand:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container-fluid" style="margin-top: -30px;">
+            <a class="navbar-brand" href="#" >
+                <!-- Your provided logo image URL goes here -->
+                <img src="asset/Graphcms.svg" alt="Logo" height="150px" width="300px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav " >
+    
+                    <li class="nav-item dropdown" style="margin-left: 150px;">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Product
+                        </a>
+                        
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #f9f8fa0a;">
+                            <a class="dropdown-item" href="#">Feature 1</a>
+                            <a class="dropdown-item" href="#">Feature 2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Agencies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Enterprises</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 150px;">
+                        <a class="nav-link" href="#">Docs</a>
+                    </li> 
+                    <li class="nav-item ms-auto ">
+                        <a class="btn" title="Login" aria-haspopup="true" href="#"><img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg" &nbps alt="Login" class="-dOa_b L_FVxe" width="24" height="24"><span> Login</span></a>
+                    </li>
+                    <li class="nav-item ms-auto">
+                        <a class="btn" title="contact" aria-haspopup="true" href="#"><img src="asset/send.svg" &nbps alt="Login" class="-dOa_b L_FVxe" width="24" height="24"><span>Contact US</span></a>
+                    </li> &nbsp;
+                    <li class="nav-item ms-auto">
+                        <a class="nav-link skyblue-btn" href="#">
+                            Signup
+                            <img src="asset/arrow-right-short.svg" alt="Right Arrow" class="-dOa_b L_FVxe" width="24" height="24">
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Your content goes here -->
+    <div class="container text-center">
+        <h1 style="margin-top: 30px;">Manage Content for Any Platform</h1> <br>
+        <h4 style="margin: 30px;"><b>Headless CMS</b> for Digital Creators, <b>GraphQL</b> Content APIs for Digital Products.</h4>
+        <div style="margin: 50px;">
+            <button type="button" class="sky">
+                <i class="bi bi-star"></i> START A FREE TRIAL
+                <img src="asset/arrow-right-short.svg" alt="Right Arrow" class="-dOa_b L_FVxe" width="24" height="24">
+    
+            </button>
+      
+            <!-- Transparent button with an icon -->
+            <button type="button" class="btn transparent-btn">
+                <img src="asset/card-list.svg" alt="Right Arrow" class="-dOa_b L_FVxe" width="24" height="24">
+                <i class="bi bi-heart"></i> Request A Demo
+                
+            </button>
+        </div> 
+        <!-- Bootstrap Cards in a row -->
+        </div>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="card">
+        
+                        <div class="card-body">
+                            <img src="asset/gear-wide-connected.svg" alt="Thumbnail" class="thumbnail" height="25px">
+                            <h5 class="card-title card-title-pink">Build</h5> 
+                            <p class="card-text">Within minutes, define everything about your GraphQL API- structures, relations, powerful permissions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="asset/sliders.svg" alt="Thumbnail" class="thumbnail" height="25px">
+                            <h5 class="card-title card-title-pink">Manage</h5>
+                            <p class="card-text">We give contentt creators the tools they're used to-text editors, workflows, advanced roles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="asset/sign-intersection.svg" class="thumbnail" height="25px">
+                            <h5 class="card-title card-title-pink">Integrate</h5>
+                            <p class="card-text">Use your generated GraphQL API to deliver content into any platform of your choice</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Add Bootstrap JS and Popper.js scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+        
+             document.addEventListener("DOMContentLoaded", function () {
+            // Replace 'YOUR_API_ENDPOINT' with the actual API endpoint
+            const apiEndpoint = 'YOUR_API_ENDPOINT';
+
+            // Replace 'YOUR_AUTH_TOKEN' with the actual authentication token
+            const authToken = 'YOUR_AUTH_TOKEN';
+
+            // Function to start a free trial
+            window.startFreeTrial = function () {
+                // Implement your logic to start a free trial
+                console.log('Starting free trial...');
+            };
+
+            // Function to request a demo
+            window.requestDemo = function () {
+                // Implement your logic to request a demo
+                console.log('Requesting demo...');
+            };
+
+            fetch(apiEndpoint, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${authToken}`
+                    // Add other headers as needed for your API
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the fetched data, update the content or perform other actions
+                    console.log(data);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
+
+</body>
+</html>
